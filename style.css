@@ -1,0 +1,434 @@
+/* =========================
+   1. GLOBAL VARIABLES & RESET
+========================= */
+:root {
+  --bg-main: #f8fafc;
+  --text-main: #1e293b;
+  --accent: #38bdf8;
+  --accent-deep: #0284c7;
+  --dark-footer: #0f172a;
+  --card-bg: rgba(255, 255, 255, 0.95);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  line-height: 1.7;
+  color: var(--text-main);
+  transition: all 0.5s ease;
+  background-attachment: fixed;
+}
+
+/* =========================
+   2. PARAGRAPH STYLING
+========================= */
+p {
+  background: rgba(255, 255, 255, 0.5);
+  padding: 1.5rem;
+  border-radius: 15px;
+  border-left: 5px solid var(--accent);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.02);
+  margin-bottom: 1.2rem;
+  backdrop-filter: blur(8px);
+}
+
+/* =========================
+   3. CARDS
+========================= */
+.card {
+  background: var(--card-bg);
+  border-radius: 24px;
+  padding: 2.5rem;
+  border: 1px solid rgba(0,0,0,0.05);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+/* Home Page Cards */
+.page-home .card {
+  background-color: rgba(56, 189, 248, 0.1); /* soft blue tint */
+}
+
+/* Math Page Cards */
+.page-math .card {
+  background-color: rgba(0, 223, 48, 0.24); /* soft teal tint */
+}
+
+/* Programming Page Cards */
+.page-programming .card {
+  background-color: rgba(251, 190, 36, 0.47); /* soft yellow tint */
+}
+
+/* Web Development Page Cards */
+.page-web .card {
+  background-color: hsl(255, 85%, 90%); /* soft purple tint */
+}
+
+.card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 30px 60px rgba(2,132,199,0.15);
+  border-color: var(--accent);
+}
+
+.card-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+/* Small variant for roadmap/tools cards */
+.card.small {
+  padding: 1.5rem;
+}
+/* =========================
+   Textbook Cards - Square Shape
+========================= */
+.card.textbook {
+  aspect-ratio: 1 / 1; /* makes width equal to height */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center; /* centers content vertically */
+  align-items: center;     /* centers content horizontally */
+  text-align: center;      /* keeps text centered */
+  max-width: 280px;
+  max-height:270px;
+  margin: 0.1rem;
+  padding: 1.5rem;         /* adjust padding if needed */
+}
+.textbooks-section {
+  background: rgba(255, 255, 255, 0.95); /* white background */
+  padding: 2rem;                          /* inner spacing */
+  border-radius: 20px;                     /* rounded corners */
+  max-width: 1000px;                       /* limits width of white background */
+  margin: 2rem auto;                       /* centers on page with top/bottom spacing */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05); /* subtle shadow for depth */
+}
+/* =========================
+   4. HERO SECTIONS
+   (Placeholder images for each page)
+========================= */
+.hero {
+  position: relative;
+  padding: 6rem 10% 4rem;
+  color: white;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+/* Home Page Hero */
+.page-home .hero-home {
+  /* PLACEHOLDER: Replace 'URL-HERE' with your online hero image URL */
+  background-image: url('https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg');
+  background-color: rgba(86, 204, 242, 0.4);
+  background-blend-mode: overlay;
+}
+
+/* Math Page Hero */
+.page-math .hero-math {
+  /* PLACEHOLDER: Replace 'URL-HERE' with your online math hero image */
+  background-image: url('https://images.pexels.com/photos/6683989/pexels-photo-6683989.jpeg');
+  background-color: transparent;
+  background-blend-mode: normal;
+}
+
+/* Programming Page Hero */
+.page-programming .hero-programming {
+  /* PLACEHOLDER: Replace 'URL-HERE' with your online programming hero image */
+  background-image: url('URL-HERE');
+  background-color: #FBBF24;
+  background-blend-mode: overlay;
+}
+
+/* Web Dev Page Hero */
+.page-web .hero-web {
+  /* PLACEHOLDER: Replace 'URL-HERE' with your online web-dev hero image */
+  background-image: url('URL-HERE');
+  background-color: #A78BFA;
+  background-blend-mode: overlay;
+}
+/* =========================
+   HERO BUTTONS
+========================= */
+.hero .btn {
+  background: var(--accent);       /* bright blue so it stands out */
+  color: white;                     /* readable on any hero */
+  font-weight: 700;                 /* bold text */
+  font-size: 1.1rem;                /* slightly bigger text */
+  padding: 0.9rem 2rem;             /* make it more clickable */
+  border-radius: 12px;              /* rounded corners */
+  box-shadow: 0 8px 20px rgba(0,132,199,0.3); /* subtle shadow for depth */
+  transition: all 0.3s ease;
+  text-decoration: none;            /* remove underline */
+}
+
+.hero .btn:hover {
+  background: var(--accent-deep);   /* darker blue on hover */
+  transform: translateY(-3px);      /* lift effect */
+  box-shadow: 0 12px 25px rgba(0,132,199,0.4); /* stronger shadow */
+}
+
+/* =========================
+   5. PAGE BACKGROUNDS & TEXTURES
+========================= */
+
+/* Home Page Background */
+.page-home body {
+  background: 
+    radial-gradient(circle at top right, rgba(56, 189, 248, 0.1), transparent),
+    url('https://www.transparenttextures.com/patterns/cubes.png'),
+    #f8fafc;
+}
+
+/* Math Page Background */
+body.page-math {
+  background: 
+    radial-gradient(circle at top left, rgba(2,132,199,0.08), transparent),
+   
+    #e0fae9;
+}
+
+/* Programming Page Background */
+.page-programming body {
+  background: 
+    radial-gradient(circle at bottom right, rgba(16,185,129,0.08), transparent),
+    url('https://www.transparenttextures.com/patterns/carbon-fibre.png'),
+    #fff8e1;
+}
+
+/* Web Dev Page Background */
+.page-web body {
+  background: 
+    radial-gradient(circle at center, rgba(167,139,250,0.05), transparent),
+    url('https://www.transparenttextures.com/patterns/dots.png'),
+    #f3e8ff;
+}
+
+/* =========================
+   6. FOOTERS
+========================= */
+footer {
+  background: linear-gradient(180deg, var(--dark-footer) 0%, #020617 100%);
+  color: white;
+  padding: 3rem 10% 2rem;
+  margin-top: 4rem;
+  border-radius: 50px 50px 0 0;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+footer p {
+  margin-bottom: 0.5rem;
+}
+
+footer h3 {
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+/* =========================
+   7. NAVIGATION
+========================= */
+nav {
+  background: rgba(15,23,42,0.95);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  padding: 1rem 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: #f8fafc;
+  text-decoration: none;
+  font-weight: 600;
+  text-shadow: 0 0 6px rgba(255,255,255,0.35);
+}
+
+nav ul li a.active {
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 2px;
+}
+nav .logo h1{
+  color: #ffffff;
+  font-weight:700;
+  text-shadow: 0 0 8px 
+  rgba(255,255,255,0.45);
+}
+/* =========================
+   8. GRID LAYOUTS
+========================= */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.grid-section {
+  padding: 4rem 10%;
+}
+
+.section-header h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.section-header p {
+  font-size: 1rem;
+  color: #334155;
+}
+/* =========================
+   Textbook Cards Container - Grid Layout
+========================= */
+.textbooks-section .card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.5rem; /* space between cards */
+  justify-items: center; /* centers cards in their grid cells */
+  margin-top: 2rem;
+}
+/* FORCE Recommended Textbooks heading to show */
+body.page-math .textbooks-section h2 {
+  color: #1e293b;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+} .textbooks-section p {
+  font-weight: 500;
+  margin-top: 0.5rem;
+color: #334155;
+}
+/* =========================
+   9. CONTENT SPLIT
+========================= */
+.content-split {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 4rem 10%;
+}
+.textbooks-section {
+  margin-top: 4rem; /* space from previous section */
+  padding: 2rem 10%; /* padding like other sections */
+}
+
+.textbooks-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #ffffff; /* heading color */
+}
+.textbook-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+.mission-box, .about-box {
+  flex: 1 1 400px;
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.01);
+}
+
+
+/* =========================
+   10. RESPONSIVENESS
+========================= */
+@media (max-width: 1024px) {
+  .content-split {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+  nav {
+    flex-direction: column;
+    padding: 1rem;
+  }
+}
+/* ==============================
+   About Section Animation
+============================== */
+.about-box {
+  opacity: 0; /* start invisible */
+  transform: translateY(30px); /* start slightly lower */
+  transition: all 1s ease-out;
+  position: relative;
+}
+
+/* Make it visible after JS triggers */
+.about-box.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Optional floating effect */
+.about-box.float {
+  animation: floatUpDown 3s ease-in-out infinite;
+}
+.about-box {
+  opacity: 0; /* existing fade-in */
+  transform: translateY(30px); /* existing fade-in */
+  transition: all 1s ease-out;
+  position: relative;
+
+  /* NEW STYLING TO FIX WIDTH */
+  max-width: 900px;      /* limits how wide it can go */
+  margin: 2rem auto;     /* centers it horizontally with some spacing above/below */
+  padding: 2rem;         /* keeps content away from edges */
+}
+.about-box {
+  border-radius: 20px;   /* soft rounded corners */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08); /* subtle shadow */
+}
+.about-box {
+  font-family: 'Merriweather', serif;
+}
+
+@keyframes floatUpDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Typewriter effect for specific paragraphs */
+.typewriter {
+  overflow: hidden;
+  border-right: 3px solid var(--accent); /* blinking cursor */
+  white-space: normal;
+  width: 100% ;
+  animation: typing 4s steps(60, end) forwards, blink-caret 0.7s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  50% { border-color: transparent; }
+  100% { border-color: var(--accent); }
+}
