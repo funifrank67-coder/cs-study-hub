@@ -451,8 +451,6 @@ color: #334155;
   }
 }
 @media (max-width: 768px) {
-
-  .cards,
   .card-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -460,17 +458,5 @@ color: #334155;
   }
 
 }
-@media (max-width: 768px) {
 
-  body {
-    overflow-x: hidden;
-  }
 
-  .container,
-  .content,
-  section {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-}
