@@ -458,6 +458,38 @@ color: #334155;
   }
 
 }
+/* ======= Mobile Fix - Final Layout ======= */
+@media (max-width: 768px) {
+  /* Navigation adjustments */
+  header nav {
+    flex-wrap: wrap; /* Allows nav items to wrap to next line */
+    justify-content: flex-start;
+  }
+  
+  header nav a {
+    margin: 0.3rem 0.5rem; /* Slight spacing around links */
+    font-size: 0.95rem;     /* Slightly smaller font to fit */
+    white-space: nowrap;    /* Prevents breaking mid-word */
+  }
+  
+  header h1 {
+    font-size: 1.4rem;  /* Shrink header slightly */
+  }
+
+  /* Card layout adjustments */
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.8rem;
+  }
+
+  /* Ensure cards and text fit */
+  .card {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+}
+
 
 
 
