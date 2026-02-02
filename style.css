@@ -432,64 +432,94 @@ color: #334155;
   50% { border-color: transparent; }
   100% { border-color: var(--accent); }
 }
-/* =========================
-   Mobile Navigation
-========================= */
+/* ====================
+   MOBILE RESPONSIVENESS FIX (FINAL)
+==================== */
+
 @media (max-width: 768px) {
-  header nav {
-    flex-direction: column;  /* stack links vertically */
-    align-items: flex-start;  /* align to the left */
+
+  /* Safety net: prevent horizontal cutting */
+  * {
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
   }
 
-  header nav a {
-    margin: 0.5rem 0;       /* spacing between links */
-    font-size: 1rem;        /* smaller text */
+  /* ====================
+     1. NAVIGATION FIX
+  ==================== */
+  nav {
+    width: 100%;
+    flex-direction: column;   /* Stack logo above links */
+    align-items: center;
+    padding: 1rem;
+    height: auto;
   }
 
-  header h1 {
-    font-size: 1.5rem;      /* shrink main title */
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;          /* Allow wrapping instead of cutting */
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    padding: 0;
   }
-}
-@media (max-width: 768px) {
-  .card-container .card {
+
+  nav ul li a {
+    font-size: 0.85rem;       /* Smaller text for phones */
+    white-space: nowrap;     /* Prevent word breaking */
+  }
+
+  /* ====================
+     2. HERO / HEADER FIX
+  ==================== */
+  .hero {
+    padding: 3rem 1rem;
+    text-align: center;
+  }
+
+  .hero-content {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .hero-content h1 {
+    font-size: 1.6rem;
+    line-height: 1.3;
+    word-wrap: break-word;
+  }
+
+  /* ====================
+     3. CARDS / GRID FIX
+  ==================== */
+  .grid-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;  /* One card per row on phones */
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  /* ====================
+     4. FLOATING ELEMENTS
+  ==================== */
+  .floating-symbols {
+    display: none;  /* Hide animations on mobile */
+  }
+
+  /* ====================
+     5. FOOTER FIX
+  ==================== */
+  footer {
+    padding: 2.5rem 1rem;
+    border-radius: 30px 30px 0 0;
+    text-align: center;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 1rem;
   }
-
 }
-/* ======= Mobile Fix - Final Layout ======= */
-@media (max-width: 768px) {
-  /* Navigation adjustments */
-  header nav {
-    flex-wrap: wrap; /* Allows nav items to wrap to next line */
-    justify-content: flex-start;
-  }
-  
-  header nav a {
-    margin: 0.3rem 0.5rem; /* Slight spacing around links */
-    font-size: 0.95rem;     /* Slightly smaller font to fit */
-    white-space: nowrap;    /* Prevents breaking mid-word */
-  }
-  
-  header h1 {
-    font-size: 1.4rem;  /* Shrink header slightly */
-  }
-
-  /* Card layout adjustments */
-  .card-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 0.8rem;
-  }
-
-  /* Ensure cards and text fit */
-  .card {
-    padding: 1rem;
-    font-size: 0.9rem;
-  }
-}
-
-
-
-
