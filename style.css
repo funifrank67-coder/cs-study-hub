@@ -489,6 +489,24 @@ color: #334155;
     line-height: 1.3;
     word-wrap: break-word;
   }
+   /* ====================
+   COMPACT CARDS ON MOBILE
+==================== */
+
+.card {
+  padding: 1rem;
+  min-height: auto;
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
 
   /* ====================
      3. CARDS / GRID FIX
@@ -523,3 +541,4 @@ color: #334155;
     gap: 1rem;
   }
 }
+
