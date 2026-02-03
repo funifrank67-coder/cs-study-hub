@@ -193,7 +193,28 @@ Morris</h4>
      BACK TO TOP BUTTON
 ====================== -->
 <div id="back-to-top">↑</div>
+<!-- Back to Top Button Script -->
+<script>
+  const backToTop = document.getElementById('back-to-top');
 
+  // Show button after scrolling down 300px
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      backToTop.classList.add('show');
+    } else {
+      backToTop.classList.remove('show');
+    }
+  });
+
+  // Scroll to top smoothly when clicked
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+</script>
 </body>
 
 </html>
+
