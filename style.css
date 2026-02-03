@@ -500,9 +500,10 @@ color: #334155;
   ==================== */
   .grid-container {
     display: grid;
-    grid-template-columns: 1fr;  /* One card per row on phones */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) ;  /* One card per row on phones */
     gap: 1.5rem;
     padding: 0 1rem;
+     justify-items: center;
   }
     /* ====================
    COMPACT CARDS ON MOBILE
@@ -690,4 +691,5 @@ html {
     font-size: 1rem;
   }
 }
+
 
