@@ -507,6 +507,7 @@ color: #334155;
 .card {
   padding: 1rem;
   min-height: auto;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.06);
 }
 
 .card h3 {
@@ -565,3 +566,4 @@ color: #334155;
     border-color: inherit;
   }
 }
+
