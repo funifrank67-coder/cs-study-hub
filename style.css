@@ -505,6 +505,16 @@ color: #334155;
     padding: 0 1rem;
      justify-items: center;
   }
+   .card {
+  display: flex;
+  flex-direction: column;      /* stack content vertically */
+  justify-content: flex-start; /* content flows naturally */
+  height: auto;                /* don't fix height */
+}
+
+.card a.btn {                 /* the "View Resources" button inside card */
+  margin-top: auto;            /* pushes button to the bottom */
+}
     /* ====================
    COMPACT CARDS ON MOBILE
 ==================== */
@@ -695,6 +705,7 @@ html {
     font-size: 1rem;
   }
 }
+
 
 
 
