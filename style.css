@@ -635,32 +635,39 @@ html {
    MOBILE POLISH: Extras
 ========================= */
 
-/* 1️⃣ Optional back-to-top button styling */
+/* ====================
+   Back to Top Button
+==================== */
 #back-to-top {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 45px;
-  height: 45px;
+  bottom: 2rem;
+  right: 2rem;
   background: var(--accent);
-  color: #fff;
-  font-size: 1.5rem;
+  color: white;
+  width: 3rem;
+  height: 3rem;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+  font-size: 1.5rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
   transition: all 0.3s ease;
+  opacity: 0;           /* hidden by default */
+  pointer-events: none; /* ignore clicks when hidden */
   z-index: 1000;
-  opacity: 0.8;
 }
 
 #back-to-top:hover {
   transform: translateY(-3px);
-  opacity: 1;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
+#back-to-top.show {
+  opacity: 1;
+  pointer-events: auto;  /* clickable when visible */
+}
 /* 2️⃣ Optional card text truncation for ultra-small screens */
 @media (max-width: 375px) {
   .card p {
@@ -683,3 +690,4 @@ html {
     font-size: 1rem;
   }
 }
+
