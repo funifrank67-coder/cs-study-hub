@@ -538,6 +538,55 @@ nav ul li a,
 .card a {
   padding: 0.6rem 0.8rem; /* bigger tappable area for fingers */
 }
+ /* ====================
+   POLISH: Compact cards for very small phones
+==================== */
+@media (max-width: 375px) {  /* covers iPhone SE / small phones */
+  .grid-container {
+    grid-template-columns: 1fr; /* one card per row */
+    gap: 1rem;                  /* slightly smaller gap */
+    padding: 0 0.5rem;          /* reduce side padding */
+  }
+
+  .card {
+    padding: 0.8rem;            /* reduce padding */
+    min-height: auto;           /* let card shrink naturally */
+    max-height: 220px;          /* prevent overly tall cards */
+  }
+
+  .card h3 {
+    font-size: 1rem;            /* smaller heading for small screens */
+    margin-bottom: 0.4rem;
+  }
+
+  .card p {
+    font-size: 0.85rem;         /* slightly smaller text */
+    line-height: 1.3;           /* tighter line height */
+  }
+}
+   /* POLISH: Slightly larger small phones (iPhone X / 6.1–6.7") */
+@media (min-width: 376px) and (max-width: 428px) {
+  .grid-container {
+    grid-template-columns: 1fr; 
+    gap: 1.2rem;               /* slightly bigger gap */
+    padding: 0 0.75rem;
+  }
+
+  .card {
+    padding: 1rem;
+    max-height: 250px;          /* a bit taller for bigger small phones */
+  }
+
+  .card h3 {
+    font-size: 1.05rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .card p {
+    font-size: 0.9rem;
+    line-height: 1.35;
+  }
+}
   /* ====================
      4. FLOATING ELEMENTS
   ==================== */
@@ -581,4 +630,56 @@ nav ul li a,
 ==================== */
 html {
   scroll-behavior: smooth;
+}
+/* =========================
+   MOBILE POLISH: Extras
+========================= */
+
+/* 1️⃣ Optional back-to-top button styling */
+#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 45px;
+  height: 45px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  opacity: 0.8;
+}
+
+#back-to-top:hover {
+  transform: translateY(-3px);
+  opacity: 1;
+}
+
+/* 2️⃣ Optional card text truncation for ultra-small screens */
+@media (max-width: 375px) {
+  .card p {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;  /* show max 4 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+/* 3️⃣ Slight hero text scaling for very small phones */
+@media (max-width: 375px) {
+  .hero-content h1 {
+    font-size: 1.4rem;
+    line-height: 1.25;
+  }
+  .hero .btn {
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+  }
 }
