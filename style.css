@@ -518,6 +518,14 @@ color: #334155;
   font-size: 0.9rem;
   line-height: 1.4;
 }
+   /* Reduce paragraph heaviness inside cards on mobile */
+.card p {
+  background: transparent;
+  padding: 0;
+  border-left: none;
+  box-shadow: none;
+  margin-bottom: 0.5rem;
+}
 
   /* ====================
      4. FLOATING ELEMENTS
@@ -542,5 +550,18 @@ color: #334155;
     gap: 1rem;
   }
 }
-
-
+@media (min-width: 480px) and (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* ====================
+   FIX #3: Disable hover effects on mobile
+==================== */
+@media (max-width: 768px) {
+  .card:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: inherit;
+  }
+}
