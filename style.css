@@ -522,13 +522,16 @@ color: #334155;
 .card {
   padding: 1rem;
   min-height: auto;
-   max-height: 450px;
+   max-height: 300px;
    display: flex;
    flex-direction: column;
    justify-content: space-between;
   box-shadow: 0 8px 18px rgba(0,0,0,0.06);
 }
-
+.page-home .card {
+   max-height: 500px;
+   justify-content: flex-start; 
+}
 .card h3 {
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
@@ -705,6 +708,7 @@ html {
     font-size: 1rem;
   }
 }
+
 
 
 
