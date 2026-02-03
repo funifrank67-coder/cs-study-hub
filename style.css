@@ -522,7 +522,7 @@ color: #334155;
 .card {
   padding: 1rem;
   min-height: auto;
-   max-height: 300px;
+   max-height: 450px;
    display: flex;
    flex-direction: column;
    justify-content: space-between;
@@ -705,6 +705,7 @@ html {
     font-size: 1rem;
   }
 }
+
 
 
 
