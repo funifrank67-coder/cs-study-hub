@@ -489,8 +489,12 @@ color: #334155;
     line-height: 1.3;
     word-wrap: break-word;
   }
-  
-
+  /* ====================
+   FIX #5: Reduce hero height
+==================== */
+.hero {
+  min-height: auto; /* lets hero shrink naturally on mobile */
+}
   /* ====================
      3. CARDS / GRID FIX
   ==================== */
@@ -527,7 +531,13 @@ color: #334155;
   box-shadow: none;
   margin-bottom: 0.5rem;
 }
-
+/* ====================
+   FIX #4: Improve tap comfort
+==================== */
+nav ul li a,
+.card a {
+  padding: 0.6rem 0.8rem; /* bigger tappable area for fingers */
+}
   /* ====================
      4. FLOATING ELEMENTS
   ==================== */
@@ -566,4 +576,9 @@ color: #334155;
     border-color: inherit;
   }
 }
-
+/* ====================
+   FIX #6: Smooth scrolling
+==================== */
+html {
+  scroll-behavior: smooth;
+}
