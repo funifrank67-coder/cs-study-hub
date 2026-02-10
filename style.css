@@ -1,5 +1,5 @@
 /* =========================
-   1. GLOBAL VARIABLES & RESET
+   changes
 ========================= */
 :root {
   --bg-main: #f8fafc;
@@ -25,7 +25,7 @@ body {
 }
 
 /* =========================
-   2. PARAGRAPH STYLING
+   2. PARAGRAPH  style
 ========================= */
 p {
   background: rgba(255, 255, 255, 0.5);
@@ -95,25 +95,24 @@ p {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  justify-content: center; /* centers content vertically */
-  align-items: center;     /* centers content horizontally */
-  text-align: center;      /* keeps text centered */
+  justify-content: center;
+  align-items: center;    
+  text-align: center;      
   max-width: 280px;
   max-height:270px;
   margin: 0.1rem;
-  padding: 1.5rem;         /* adjust padding if needed */
+  padding: 1.5rem;      
 }
 .textbooks-section {
-  background: rgba(255, 255, 255, 0.95); /* white background */
-  padding: 2rem;                          /* inner spacing */
-  border-radius: 20px;                     /* rounded corners */
-  max-width: 1000px;                       /* limits width of white background */
-  margin: 2rem auto;                       /* centers on page with top/bottom spacing */
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05); /* subtle shadow for depth */
+  background: rgba(255, 255, 255, 0.95); 
+  padding: 2rem;                          
+  border-radius: 20px;                    
+  max-width: 1000px;                      
+  margin: 2rem auto;                      
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
 }
 /* =========================
    4. HERO SECTIONS
-   (Placeholder images for each page)
 ========================= */
 .hero {
   position: relative;
@@ -128,31 +127,28 @@ p {
 
 /* Home Page Hero */
 .page-home .hero-home {
-  /* PLACEHOLDER: Replace 'URL-HERE' with your online hero image URL */
   background-image: url('https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg');
   background-color: rgba(86, 204, 242, 0.4);
   background-blend-mode: overlay;
 }
 
-/* Math Page Hero */
+/* Math PageHero */
 .page-math .hero-math {
-  /* PLACEHOLDER: Replace 'URL-HERE' with your online math hero image */
   background-image: url('https://images.pexels.com/photos/6683989/pexels-photo-6683989.jpeg');
   background-color: transparent;
   background-blend-mode: normal;
 }
 
-/* Programming Page Hero */
+/* Programming */
 .page-programming .hero-programming {
-  /* PLACEHOLDER: Replace 'URL-HERE' with your online programming hero image */
+ 
   background-image: url('URL-HERE');
   background-color: #FBBF24;
   background-blend-mode: overlay;
 }
 
-/* Web Dev Page Hero */
+/* Web Dev Page*/
 .page-web .hero-web {
-  /* PLACEHOLDER: Replace 'URL-HERE' with your online web-dev hero image */
   background-image: url('URL-HERE');
   background-color: #A78BFA;
   background-blend-mode: overlay;
@@ -161,21 +157,21 @@ p {
    HERO BUTTONS
 ========================= */
 .hero .btn {
-  background: var(--accent);       /* bright blue so it stands out */
-  color: white;                     /* readable on any hero */
-  font-weight: 700;                 /* bold text */
-  font-size: 1.1rem;                /* slightly bigger text */
-  padding: 0.9rem 2rem;             /* make it more clickable */
-  border-radius: 12px;              /* rounded corners */
-  box-shadow: 0 8px 20px rgba(0,132,199,0.3); /* subtle shadow for depth */
+  background: var(--accent);       
+  color: white;                    
+  font-weight: 700;                
+  font-size: 1.1rem;              
+  padding: 0.9rem 2rem;            
+  border-radius: 12px;              
+  box-shadow: 0 8px 20px rgba(0,132,199,0.3); 
   transition: all 0.3s ease;
-  text-decoration: none;            /* remove underline */
+  text-decoration: none;            
 }
 
 .hero .btn:hover {
-  background: var(--accent-deep);   /* darker blue on hover */
-  transform: translateY(-3px);      /* lift effect */
-  box-shadow: 0 12px 25px rgba(0,132,199,0.4); /* stronger shadow */
+  background: var(--accent-deep);   
+  transform: translateY(-3px);      /
+  box-shadow: 0 12px 25px rgba(0,132,199,0.4); 
 }
 
 /* =========================
@@ -308,7 +304,7 @@ nav .logo h1{
   justify-items: center; /* centers cards in their grid cells */
   margin-top: 2rem;
 }
-/* FORCE Recommended Textbooks heading to show */
+/*textbook */
 body.page-math .textbooks-section h2 {
   color: #1e293b;
   font-size: 2rem;
@@ -330,8 +326,8 @@ color: #334155;
   margin: 4rem 10%;
 }
 .textbooks-section {
-  margin-top: 4rem; /* space from previous section */
-  padding: 2rem 10%; /* padding like other sections */
+  margin-top: 4rem; 
+  padding: 2rem 10%; 
 }
 
 .textbooks-section h2 {
@@ -374,7 +370,7 @@ color: #334155;
    About Section Animation
 ============================== */
 .about-box {
-  opacity: 0; /* start invisible */
+  opacity: 0; 
   transform: translateY(30px); /* start slightly lower */
   transition: all 1s ease-out;
   position: relative;
@@ -386,7 +382,7 @@ color: #334155;
   transform: translateY(0);
 }
 
-/* Optional floating effect */
+/*floating effect*/
 .about-box.float {
   animation: floatUpDown 3s ease-in-out infinite;
 }
@@ -397,12 +393,12 @@ color: #334155;
   position: relative;
 
   /* NEW STYLING TO FIX WIDTH */
-  max-width: 900px;      /* limits how wide it can go */
-  margin: 2rem auto;     /* centers it horizontally with some spacing above/below */
-  padding: 2rem;         /* keeps content away from edges */
+  max-width: 900px;      
+  margin: 2rem auto;    
+  padding: 2rem;        
 }
 .about-box {
-  border-radius: 20px;   /* soft rounded corners */
+  border-radius: 20px;  
   box-shadow: 0 10px 25px rgba(0,0,0,0.08); /* subtle shadow */
 }
 .about-box {
@@ -414,7 +410,7 @@ color: #334155;
   50% { transform: translateY(-10px); }
 }
 
-/* Typewriter effect for specific paragraphs */
+/* Typewriter effect  */
 .typewriter {
   overflow: hidden;
   border-right: 3px solid var(--accent); /* blinking cursor */
@@ -433,7 +429,7 @@ color: #334155;
   100% { border-color: var(--accent); }
 }
 /* ====================
-   MOBILE RESPONSIVENESS FIX (FINAL)
+   MOBILE RESPONSIVENESS FIX
 ==================== */
 
 @media (max-width: 768px) {
@@ -450,7 +446,7 @@ color: #334155;
   ==================== */
   nav {
     width: 100%;
-    flex-direction: column;   /* Stack logo above links */
+    flex-direction: column;  
     align-items: center;
     padding: 1rem;
     height: auto;
@@ -459,7 +455,7 @@ color: #334155;
   nav ul {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;          /* Allow wrapping instead of cutting */
+    flex-wrap: wrap;          
     justify-content: center;
     gap: 10px;
     margin-top: 10px;
@@ -467,12 +463,12 @@ color: #334155;
   }
 
   nav ul li a {
-    font-size: 0.85rem;       /* Smaller text for phones */
-    white-space: nowrap;     /* Prevent word breaking */
+    font-size: 0.85rem;       
+    white-space: nowrap;     
   }
 
   /* ====================
-     2. HERO / HEADER FIX
+     2. HERO fix
   ==================== */
   .hero {
     padding: 3rem 1rem;
@@ -493,7 +489,7 @@ color: #334155;
    FIX #5: Reduce hero height
 ==================== */
 .hero {
-  min-height: auto; /* lets hero shrink naturally on mobile */
+  min-height: auto; /
 }
   /* ====================
      3. CARDS / GRID FIX
@@ -509,7 +505,7 @@ color: #334155;
   display: flex;
   flex-direction: column;      /* stack content vertically */
   justify-content: flex-start; /* content flows naturally */
-  height: auto;                /* don't fix height */
+  height: auto;               
 }
 
 .card a.btn {                 /* the "View Resources" button inside card */
@@ -559,7 +555,7 @@ nav ul li a,
  /* ====================
    POLISH: Compact cards for very small phones
 ==================== */
-@media (max-width: 375px) {  /* covers iPhone SE / small phones */
+@media (max-width: 375px) {  /* covers on small phones */
   .grid-container {
     grid-template-columns: 1fr; /* one card per row */
     gap: 1rem;                  /* slightly smaller gap */
@@ -686,7 +682,7 @@ html {
   opacity: 1;
   pointer-events: auto;  /* clickable when visible */
 }
-/* 2️⃣ Optional card text truncation for ultra-small screens */
+
 @media (max-width: 375px) {
   .card p {
     display: -webkit-box;
@@ -697,7 +693,7 @@ html {
   }
 }
 
-/* 3️⃣ Slight hero text scaling for very small phones */
+
 @media (max-width: 375px) {
   .hero-content h1 {
     font-size: 1.4rem;
@@ -708,6 +704,7 @@ html {
     font-size: 1rem;
   }
 }
+
 
 
 
