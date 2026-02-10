@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
+ <!-listing the urls-->
 <url>
 <loc>https://funifrank67-coder.github.io/cs-study-hub/</loc>
 <priority>1.0</priority>
@@ -22,3 +22,4 @@
 </url>
 
 </urlset>
+
